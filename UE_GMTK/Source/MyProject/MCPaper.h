@@ -40,6 +40,8 @@ protected:
     void AddDefaultMapping();
 
 private:
+    UPROPERTY(EditAnywhere, BlueprintReadonly, Category="Character", meta=(AllowPrivateAccess="true"))
+    UPaperFlipbookComponent* Running{};
     UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="CapsuleComponent", meta=(AllowPrivateAccess="true"))
     class UCapsuleComponent* CapsuleComp{};
     

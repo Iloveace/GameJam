@@ -34,6 +34,13 @@ void AMCPaper::BeginPlay()
 void AMCPaper::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
+    if (GetVelocity().Length())
+    {
+        if (GetSprite())
+        {
+            
+        }
+    }
 }
 
 void AMCPaper::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
