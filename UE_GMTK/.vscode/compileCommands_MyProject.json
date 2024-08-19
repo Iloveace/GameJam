@@ -38,5 +38,21 @@
 			"@C:\\Users\\Mayeu\\OneDrive\\Documents\\Unreal Projects\\GMTK\\GameJam\\UE_GMTK\\.vscode\\compileCommands_MyProject\\MyProject.1.rsp"
 		],
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Mayeu\\OneDrive\\Documents\\Unreal Projects\\GMTK\\GameJam\\UE_GMTK\\Source\\MyProject\\Projectile.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Mayeu\\OneDrive\\Documents\\Unreal Projects\\GMTK\\GameJam\\UE_GMTK\\.vscode\\compileCommands_MyProject\\MyProject.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Mayeu\\OneDrive\\Documents\\Unreal Projects\\GMTK\\GameJam\\UE_GMTK\\Source\\MyProject\\Projectile.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Mayeu\\OneDrive\\Documents\\Unreal Projects\\GMTK\\GameJam\\UE_GMTK\\.vscode\\compileCommands_MyProject\\MyProject.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Source"
 	}
 ]

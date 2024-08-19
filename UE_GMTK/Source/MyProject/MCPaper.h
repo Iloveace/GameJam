@@ -7,6 +7,7 @@
 #include "PaperCharacter.h"
 #include "MCPaper.generated.h"
 
+
 /**
  *
  */
@@ -19,12 +20,12 @@ public:
 protected:
     virtual void BeginPlay() override;
 
-/*
-    *   Forward declared UInputMappingContext and UinputAction as well as initialized them as pointers.
-    *   Then forward declared my "Forward" function. It takes a const FInputActionValue address that
-    *   needed to be included in this header file.
-    * 
-    */
+    /*
+        *   Forward declared UInputMappingContext and UinputAction as well as initialized them as pointers.
+        *   Then forward declared my "Forward" function. It takes a const FInputActionValue address that
+        *   needed to be included in this header file.
+        *
+        */
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Input")
     class UInputMappingContext* IMC_Default{};
 
@@ -34,15 +35,35 @@ protected:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Input")
     UInputAction* JumpAction{};
 
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Input")
+    UInputAction* ProjectAction{};
+
+    void AnimSwitch();
     void Forward(const FInputActionValue& Value);
     void JumpAct(const FInputActionValue& Value);
+    void StopJumpAct(const FInputActionValue& Value);
+    void Project(const FInputActionValue& Value);
 
     void AddDefaultMapping();
 
 private:
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Character", meta=(AllowPrivateAccess="true"))
+    class UPaperFlipbook* Idle{};
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Character", meta=(AllowPrivateAccess="true"))
+    UPaperFlipbook* Running{};
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Character", meta=(AllowPrivateAccess="true"))
+    UPaperFlipbook* Jumping{};
+
+
+    UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Projectile", meta=(AllowPrivateAccess="true"))
+    class TSubclassOf<class AProjectile> Projectile{};
+    // UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Default", meta=(AllowPrivateAccess="true"))
+    // class AProjectile Pro{};
     UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="CapsuleComponent", meta=(AllowPrivateAccess="true"))
     class UCapsuleComponent* CapsuleComp{};
-    
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Arrow Component", meta=(AllowPrivateAccess="true"))
+    class UArrowComponent* ArrowComp{};
+
     // We create USpringArmComponent pointer and UCameraComponent.
     // Created a spring arm component pointer that is used to connect our camera to our player pawn.
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Camera", meta=(AllowPrivateAccess="true"))
