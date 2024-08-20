@@ -53,7 +53,7 @@ void AProjectile::Tick(float DeltaTime)
 void AProjectile::OnHit(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, const FHitResult& Hit)
 {
 
-    UE_LOG(LogTemp, Display, TEXT("%s"), *OtherActor->GetName());
+    
     FBComponent->SetFlipbook(Boom);
     // We have to include a minus 1 
     if (FBComponent->GetPlaybackPositionInFrames()==FBComponent->GetFlipbookLengthInFrames()-FrameOffset)

@@ -144,7 +144,7 @@ void AMCPaper::AddDefaultMapping()
 
 void AMCPaper::AnimSwitch()
 {
-    if (GetCharacterMovement()->IsMovingOnGround())
+    if (GetCharacterMovement()->IsMovingOnGround() && !DingDong)
     {
         if (GetVelocity().Length())
         {

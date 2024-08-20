@@ -17,6 +17,9 @@ class MYPROJECT_API AMCPaper : public APaperCharacter
     GENERATED_BODY()
 public:
     AMCPaper();
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="DingDong")
+    bool DingDong{};
 protected:
     virtual void BeginPlay() override;
 
@@ -46,6 +49,7 @@ protected:
 
     void AddDefaultMapping();
 
+    
 private:
     UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="Character", meta=(AllowPrivateAccess="true"))
     class UPaperFlipbook* Idle{};
