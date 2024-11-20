@@ -157,18 +157,7 @@ void AMCPaper::AnimSwitch()
     }
     else
     {
-        /*
-        *   If (GetVolcity().Z < -100.0)
-        *   {
-        *       GetSprite()->SetFlipbook(JumpEnd)
-        *   }
-        *   else
-        *   {
-        *       GetSprite()->SetFlipbook(JumpStart)
-        *   }
-        *
-        *
-        */
+        // Checks if our sprite is in the air and if so, we set our animation to the jumping animation.
         if (GetVelocity().Z)
         {
             GetSprite()->SetFlipbook(Jumping);
