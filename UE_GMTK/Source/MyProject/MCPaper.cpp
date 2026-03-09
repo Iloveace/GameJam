@@ -59,7 +59,7 @@ void AMCPaper::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
     /*
     *   Initilize the UEnhancedInputComponent pointer to the UInputComponent pointer using a
     *   "CastChecked<>()" template funciton that acts like the "Cast<>()" template function,
-    *   however, it will crash if are Input variable comes back as a nullptr.
+    *   however, it will crash if the input variable comes back as a nullptr.
     *   From there, the Input pointer points to its function "BindAction()".
     */
     if (UEnhancedInputComponent* Input{CastChecked<UEnhancedInputComponent>(PlayerInputComponent)})
@@ -118,11 +118,6 @@ void AMCPaper::Project(const FInputActionValue& Value)
         FVector CompLoc{ArrowComp->GetComponentLocation()};
         FRotator CompRot{ArrowComp->GetComponentRotation()};
         GetWorld()->SpawnActor<AProjectile>(Projectile, CompLoc, CompRot);
-        
-        // if (Pro)
-        // {
-        //     GetWorld()->SpawnActor(Pro, &CompLoc, &CompRot);
-        // }
     }
 }
 
